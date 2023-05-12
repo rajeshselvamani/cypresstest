@@ -1,0 +1,22 @@
+name: E2E
+on:
+  push:
+    branches:
+      - master
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: run cypress tests
+        uses: cypress-io/github-action@v4
+        timeout-minutes: 10
+        with:
+          record: true
+          parallel: true
+        env:
+          SHOPIFY_URL: ${{ secrets.testvar }}
