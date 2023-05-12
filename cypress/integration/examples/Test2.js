@@ -1,3 +1,5 @@
+const { expect } = require("chai");
+
 describe('Second Test suite',()=>{
     it('Second Test case',()=>{
        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');
@@ -5,11 +7,11 @@ describe('Second Test suite',()=>{
        // cy.screenshot();
        // console.log(Math.PI)
        // const username = Cypress.env('username')
-        const val = Cypress.env('testvar')
+        const val = Cypress.env('TESTVAR')
         cy.log("val : "+val);
         cy.log()
         cy.url().should('include', '/rahulshettyacademy.com/') 
-        cy.url().should('include', '/raj.com/') 
+        expect(val).to.equal('hello')
        // cy.log(password);
     })
 })
