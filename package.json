@@ -6,7 +6,7 @@
   
 
   "scripts": {
-    "test:e2e": "cypress run --e2e --config videoRecording=false"
+    "test:e2e": "cypress run --e2e --headed --config videoRecording=false"
   },
 
   "author": "",
