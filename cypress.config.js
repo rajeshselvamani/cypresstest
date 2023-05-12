@@ -19,6 +19,7 @@ module.exports = defineConfig({
    // screenshotsFolder: 'cypress/screenshots',
 
   },
+  projectId: "7n337z",
 
   "env": {
     "username": "samp",
