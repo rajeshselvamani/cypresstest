@@ -16,7 +16,6 @@ jobs:
         uses: cypress-io/github-action@v4
         timeout-minutes: 10
         with:
-          record: true
-          parallel: true
+          browser: chrome
         env:
-          SHOPIFY_URL: ${{ secrets.testvar }}
+          testvar: ${{ secrets.testvar }}
