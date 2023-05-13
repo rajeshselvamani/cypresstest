@@ -8,10 +8,9 @@ describe('Second Test suite',()=>{
       // const username = Cypress.env('username')
         const val = Cypress.env('samp')
         cy.log("val : "+val);
-        cy.log()
         cy.url().should('include', '/rahulshettyacademy.com/') 
 
-        if(val === 'hello'){
+        if(val === 'hellos'){
             cy.url().should('include', '/rahulshettyacademy.com/') 
 
         }else{
