@@ -18,4 +18,4 @@ jobs:
         with:
           browser: chrome
         env:
-          TESTVAR: ${{ secrets.TESTVAR }}
+          samp: ${{ secrets.samp }}

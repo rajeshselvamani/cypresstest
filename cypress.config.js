@@ -25,6 +25,6 @@ module.exports = defineConfig({
   "env": {
     "username": "samp",
     "password": "",
-    "testvar": ""
+    "samp": ""
   }
 });
