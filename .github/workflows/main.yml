@@ -18,4 +18,4 @@ jobs:
         with:
           browser: chrome
         env:
-          samp: ${{ secrets.samp }}
+          THEME_ID: ${{ secrets.THEME_ID }}

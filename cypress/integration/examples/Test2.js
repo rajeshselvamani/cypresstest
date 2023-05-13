@@ -6,11 +6,11 @@ describe('Second Test suite',()=>{
        // cy.screenshot();
        // console.log(Math.PI)
       // const username = Cypress.env('username')
-        const val = Cypress.env('samp')
+        const val = Cypress.env('THEME_ID')
         cy.log("val : "+val);
         cy.url().should('include', '/rahulshettyacademy.com/') 
 
-        if(val === 'hellos'){
+        if(val === 'hello'){
             cy.url().should('include', '/rahulshettyacademy.com/') 
 
         }else{

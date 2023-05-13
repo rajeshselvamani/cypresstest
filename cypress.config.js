@@ -11,7 +11,7 @@ module.exports = defineConfig({
       // you could extract only specific variables
       // and rename them if necessary
      
-      config.env.testvar = process.env.testvar
+      config.env.THEME_ID = process.env.THEME_ID
       
       return config
     },
@@ -25,6 +25,6 @@ module.exports = defineConfig({
   "env": {
     "username": "samp",
     "password": "",
-    "samp": ""
+    "THEME_ID": ""
   }
 });
