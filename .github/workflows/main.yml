@@ -12,18 +12,15 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3  
 
-      - uses: actions/upload-artifact@v1
+      - name: Create folder
+        run: |
+          mkdir -p cypress/screenshots
+
+      - uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-screenshots
-          path: cypress/screenshots  
-
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v1
-        if: always()
-        with:
-          name: cypress-snapshots
-          path: cypress/snapshots    
+          path: cypress/screenshots 
   
       - name: run cypress tests
         uses: cypress-io/github-action@v4
