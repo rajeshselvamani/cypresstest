@@ -10,7 +10,7 @@ describe('Second Test suite',()=>{
         cy.log("val : "+val);
         cy.url().should('include', '/rahulshettyacademy.com/') 
 
-        if(val === 'hella'){
+        if(val === 'hello'){
             cy.url().should('include', '/rahulshettyacademy.com/') 
 
         }else{
