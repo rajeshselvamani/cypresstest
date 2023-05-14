@@ -18,10 +18,10 @@ jobs:
           node-version: '16'
 
       - uses: actions/upload-artifact@v2
-       if: always()
-       with:
-         name: cypress-screenshots
-         path: ./cypress/screenshots      
+        if: always()
+        with:
+          name: cypress-screenshots
+          path: ./cypress/screenshots      
 
       - name: run cypress tests
         uses: cypress-io/github-action@v4
