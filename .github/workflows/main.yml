@@ -18,6 +18,13 @@ jobs:
           name: cypress-screenshots
           path: ./cypress/screenshots  
 
+      - name: Upload screenshots
+        uses: actions/upload-artifact@latest
+        if: failure()
+        with:
+          name: cypress-snapshots
+          path: cypress/snapshots    
+  
       - name: run cypress tests
         uses: cypress-io/github-action@v4
         timeout-minutes: 10
