@@ -5,9 +5,10 @@ on:
       - master
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
-  runs:
+   runs:
     using: 'node16'
+    runs-on: ubuntu-latest
+ 
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
 
