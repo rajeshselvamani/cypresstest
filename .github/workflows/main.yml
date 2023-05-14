@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   cypress-run:
-   runs:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
 
@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v2
 
       - uses: actions/upload-artifact@v2
-        if: always()
-        with:
+       if: always()
+       with:
          name: cypress-screenshots
          path: ./cypress/screenshots  
 
