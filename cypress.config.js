@@ -20,7 +20,7 @@ module.exports = defineConfig({
 
   },
   projectId: "7n337z",
-  video: false,
+  video: true,
 
   "env": {
     "username": "samp",
