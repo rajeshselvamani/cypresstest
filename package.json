@@ -6,7 +6,8 @@
   
 
   "scripts": {
-    "test:e2e": "cypress run --e2e --headed --browser=chrome --config videoRecording=false"
+    "test:e2en": "cypress run --e2e --headed --browser=chrome --config videoRecording=false",
+    "test:e2end": "cypress run --e2e --headed --browser=chrome --config videoRecording=false"
   },
 
   "author": "",
