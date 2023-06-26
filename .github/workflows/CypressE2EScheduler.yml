@@ -2,7 +2,7 @@ name: E2E CRON
 on:
   # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "59 10 28 12 *"
 
 jobs:
   e2e-scheduled-cypress-run:
