@@ -32,6 +32,7 @@ jobs:
         timeout-minutes: 10
         with:
           browser: chrome
+          command: npm build
           command: npx cypress run test:e2end
         env:
           THEME_ID: ${{ secrets.THEME_ID }}
