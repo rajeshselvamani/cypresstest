@@ -1,0 +1,38 @@
+name: E2E CRON
+on:
+  # Triggers the workflow every 5 minutes
+  schedule:
+    - cron: "59 10 28 12 *"
+
+jobs:
+  e2e-scheduled-cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Check out repository code
+        uses: actions/checkout@v3  
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  
+
+      - name: Create folder
+        run: |
+          mkdir -p cypress/screenshots
+
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots 
+  
+      - name: run cypress tests
+        uses: cypress-io/github-action@v4
+        timeout-minutes: 10
+        with:
+          browser: chrome
+          command: npx cypress run test:e2end
+        env:
+          THEME_ID: ${{ secrets.THEME_ID }}
