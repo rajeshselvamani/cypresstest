@@ -31,7 +31,6 @@ jobs:
         uses: cypress-io/github-action@v4
         timeout-minutes: 10
         with:
-          start: npm build
           browser: chrome
           command: npx cypress run test:e2end
         env:
